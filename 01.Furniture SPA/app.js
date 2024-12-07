@@ -6,7 +6,7 @@ import { navs, containers } from './src/templates.js';
 import { loginApp } from './src/loginApp.js';
 import { registerApp } from './src/registerApp.js';
 import { userFurApp } from './src/userFurApp.js';
-async function router(){
+(async function router(){
     // Define routes
     page('/index.html',async () => showPage(containers.home(await getFurniture())));
     page('/',async () => showPage(containers.home(await getFurniture())));
@@ -18,10 +18,9 @@ async function router(){
     page('/details/:id',async (ctx) => {showPage(containers.details(await(await fetch(`http://localhost:3030/data/catalog/${ctx.params.id}`)).json( ))); detailsApp(ctx)});
     page('/edit/:id',async (ctx) => {showPage(containers.edit(await(await fetch(`http://localhost:3030/data/catalog/${ctx.params.id}`)).json( ))); editApp(ctx.params.id)});
     page('/my-furniture',async () => {showPage(containers.userFur(await(await fetch(`http://localhost:3030/data/catalog?where=_ownerId%3D%22${localStorage._id}%22`)).json( ))); userFurApp()});
-
+    //run router
     page.start();
-};
-router();
+})();
 
 async function getFurniture() {return await(await fetch(`http://localhost:3030/data/catalog`)).json()}
 
@@ -42,17 +41,13 @@ function showPage(template) {
             })
             if (logoutREQ.status == 204) {
                 localStorage.clear();
-                // location.reload()
+                // location.reload() updated better practise witth render instead reloading
                 render(navs.guest, navEl)
             }
         })
     }
-    else {render(navs.guest, navEl);
-
-    };
+    else {render(navs.guest, navEl)};
 
     const conteinerEl = document.querySelector(`.container`);
     render(template, conteinerEl);
-
-
 }
