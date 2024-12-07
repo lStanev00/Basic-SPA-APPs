@@ -1,5 +1,6 @@
 import {html, render} from 'https://esm.run/lit-html';
 
+//navigation templates
 export const navs =  {
     user: html` <a id="catalogLink" href="/catalog" class="active">Dashboard</a>
     <div id="user">
@@ -11,10 +12,10 @@ export const navs =  {
     <div id="guest">
     <a id="loginLink" href="/login">Login</a>
     <a id="registerLink" href="/register">Register</a>
-</div>` ,
-    
+</div>`
 }
 
+//main content page templating and little scripting
 export const containers =  {
     login: html`<div class="row space-top">
     <div class="col-md-12">

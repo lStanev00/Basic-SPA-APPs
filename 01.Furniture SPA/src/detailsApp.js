@@ -12,40 +12,27 @@ export async function detailsApp(ctx) {
         document.querySelector("#isowner > a.btn.btn-red").addEventListener(`click`, async (e) => {
             e.preventDefault();
             confirmDelete(furURL)
-            // const delREQ = await fetch(furURL, {
-            //     method: `DELETE`,
-            //     headers: {
-            //         "X-Authorization": localStorage.accessToken,
-            //         "Content-Type": "application/json"
-            //     }
-            // });
-
-            // if(delREQ.ok) page(`/`);
         });
 
     }
 }
 
 
-
+//vanilla JS dinamic DOM manipulation
 function createOwnerControls(idd) {
-    // Create the container div
     const container = document.createElement('div');
     container.id = 'isowner';
 
-    // Create the Edit button
     const editButton = document.createElement('a');
     editButton.href = `/edit/${idd}`;
     editButton.className = 'btn btn-info';
     editButton.textContent = 'Edit';
 
-    // Create the Delete button
     const deleteButton = document.createElement('a');
     deleteButton.href = `/delete/${idd}`;
     deleteButton.className = 'btn btn-red';
     deleteButton.textContent = 'Delete';
 
-    // Append the buttons to the container
     container.appendChild(editButton);
     container.appendChild(deleteButton);
 

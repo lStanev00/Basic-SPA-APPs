@@ -20,7 +20,6 @@ export function loginApp() {
             method: `POST`,
             body: JSON.stringify(exportData),
         })).json();
-        // console.log(loginReqDATA.status);
         
         if (`accessToken` in loginReqDATA) {
             localStorage._id = loginReqDATA._id;

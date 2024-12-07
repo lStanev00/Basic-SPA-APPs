@@ -10,7 +10,6 @@ export function addApp(){
 
         if (!val) return;
         if (!localStorage._id) return;
-        // val._ownerId = localStorage._id;
 
         const req = await fetch(url, {
             method: `POST`,
