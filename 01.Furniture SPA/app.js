@@ -19,7 +19,7 @@ import { registerApp } from './src/registerApp.js';
     page('/my-furniture',async () => {showPage(containers.userFur(await(await fetch(`http://localhost:3030/data/catalog?where=_ownerId%3D%22${localStorage._id}%22`)).json())); userFurApp()});
     //run router
     page.start();
-})();
+})(); //reouter seelf invoking 
 
 async function getFurniture() {return await(await fetch(`http://localhost:3030/data/catalog`)).json()}
 
