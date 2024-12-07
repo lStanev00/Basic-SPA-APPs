@@ -11,6 +11,7 @@ You will have to install the dependancies for the project to run the tests and t
 @select the folder for your terminal where is the root of the app
 
 1 - npm start //to start the test server (is dummy server only the test uses u can't interact in lifeserver with it);
+
 2 - npm test //to run the test please note the server have to run and exec this 2nd line in another terminal!;
 
 
