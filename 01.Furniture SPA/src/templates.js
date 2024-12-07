@@ -1,4 +1,4 @@
-import {html, render} from 'https://esm.run/lit-html';
+import {html, render} from 'https://esm.run/lit-html'; //templating with lit-html direct web import no dependancies i ../package.json 
 
 //navigation templates
 export const navs =  {
