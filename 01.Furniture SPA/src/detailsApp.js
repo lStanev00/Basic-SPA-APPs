@@ -52,8 +52,5 @@ async function confirmDelete(furURL) {
         });
 
         if(delREQ.ok) page(`/`);
-    } else {
-        console.log(`none`);
-        
     }
 }
