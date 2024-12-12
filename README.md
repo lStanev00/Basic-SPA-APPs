@@ -1,6 +1,6 @@
 Hello this is a learning phase repo u may not find alot of good practises but still i try to implement as many as i have stood.
 
-PLEASE NOTE that the TESTS and CSS files provided are NOT wrote by me. I own mainly JS sklills and EVERY js file is hand written by me.
+PLEASE NOTE that the TESTS and CSS files provided are NOT wrote by me. I own mainly JS skills and EVERY js file is hand written by me.
 The HTML templates are provided aswell for the :
 
 01. Furniture
